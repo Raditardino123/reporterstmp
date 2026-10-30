@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --primary: 48 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 35%;
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+    --radius: 0.875rem;
+  }
+
+  :root.light,
+  :root.dark {
+    color-scheme: light;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --primary: 48 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 35%;
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    min-height: 100%;
+    background: #ffffff;
+    scrollbar-color: #000000 #ffffff;
+    scrollbar-width: thin;
+  }
+
+  body {
+    @apply min-h-screen bg-background font-sans text-foreground antialiased;
+    background: #ffffff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-poppins), var(--font-inter), sans-serif;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  ::selection {
+    color: #000000;
+    background: #ffcc00;
+  }
+}
+
+@layer components {
+  .glass-card {
+    border: 2px solid #000000;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: none;
+    backdrop-filter: none;
+    transition: transform 160ms ease;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-1px);
+    border-color: #000000;
+    box-shadow: none;
+  }
+
+  button:not(:disabled),
+  [role="button"] {
+    transition:
+      transform 160ms ease,
+      background-color 160ms ease,
+      color 160ms ease;
+  }
+
+  button:not(:disabled):hover,
+  [role="button"]:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: none;
+  }
+
+  .gold-border {
+    border: 2px solid #000000;
+  }
+
+  .gold-particle,
+  .cursor-glow {
+    display: none;
+  }
+
+  .skeleton-shimmer {
+    background: #eeeeee;
+    animation: none;
+  }
+
+  .navigation-progress {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transform-origin: left center;
+    background: #ffcc00;
+    opacity: 0;
+    transition:
+      transform 180ms ease-out,
+      opacity 180ms ease;
+    pointer-events: none;
+  }
+
+  .navigation-progress[data-active="true"] {
+    opacity: 1;
+  }
+
+  .empty-state-illustration {
+    box-shadow: none;
+  }
+
+  .bg-gold.text-navy-deep,
+  .bg-gold-sheen.text-navy-deep {
+    color: #000000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #ffffff;
+  border-radius: 9999px;
+  background: #000000;
+  background-clip: padding-box;
+}
+
+* {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.blur,
+.blur-sm,
+.blur-md,
+.blur-lg,
+.blur-xl,
+.blur-2xl,
+.blur-3xl {
+  filter: none !important;
+}
+
+.glass-card {
+  border: 2px solid #000000 !important;
+  border-radius: 1rem;
+  background: #ffffff !important;
+}
+
+main {
+  background-color: #ffffff;
+  background-image: none !important;
+}
+
+input,
+textarea,
+select {
+  border: 2px solid #000000 !important;
+  border-radius: 0.75rem;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(0 0 0 / 0.45) !important;
+}
+
+.bg-gold.text-navy-deep,
+.bg-gold-sheen.text-navy-deep {
+  color: #000000 !important;
+}

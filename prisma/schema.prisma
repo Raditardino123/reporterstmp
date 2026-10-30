@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model GmailAccount {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  ownerEmail  String
+  email       String
+  appPassword String
+  isActive    Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  reportLogs  ReportLog[] @relation("GmailSender")
+
+  @@unique([ownerEmail, email])
+}
+
+model ReportConfig {
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  targetEmails String
+  subject      String
+  body         String
+  loopCount    Int
+  delaySeconds Int
+  createdAt    DateTime    @default(now())
+  reportLogs   ReportLog[]
+}
+
+model ReportLog {
+  id             String        @id @default(auto()) @map("_id") @db.ObjectId
+  reportConfigId String        @db.ObjectId
+  gmailSenderId  String        @db.ObjectId
+  targetEmail    String
+  status         String
+  errorMessage   String?
+  sentAt         DateTime      @default(now())
+  reportConfig   ReportConfig  @relation(fields: [reportConfigId], references: [id], onDelete: Restrict)
+  gmailSender    GmailAccount  @relation("GmailSender", fields: [gmailSenderId], references: [id], onDelete: Restrict)
+
+  @@index([reportConfigId])
+  @@index([gmailSenderId])
+  @@index([sentAt])
+}

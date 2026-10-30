@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111A2E"/>
+      <stop offset=".58" stop-color="#0A0F1F"/>
+      <stop offset="1" stop-color="#070B16"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8CC70"/>
+      <stop offset=".55" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#AA8723"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="22" y="22" width="1156" height="631" rx="26" fill="none" stroke="#D4AF37" stroke-opacity=".3"/>
+  <rect x="48" y="48" width="210" height="579" rx="18" fill="#111A2E" stroke="#fff" stroke-opacity=".08"/>
+  <rect x="73" y="77" width="38" height="38" rx="12" fill="#D4AF37" fill-opacity=".12" stroke="#D4AF37" stroke-opacity=".5"/>
+  <path d="M82 89h20v14H82zM82 89l10 8 10-8" fill="none" stroke="#E8CC70" stroke-width="1.7" stroke-linejoin="round"/>
+  <text x="121" y="101" fill="#F5F1E8" font-family="Georgia,serif" font-size="17">GmailReporter</text>
+  <rect x="66" y="154" width="174" height="40" rx="11" fill="url(#gold)"/>
+  <text x="103" y="179" fill="#0A0F1F" font-family="Arial,sans-serif" font-size="13" font-weight="700">Overview</text>
+  <g fill="#a7a9b2" font-family="Arial,sans-serif" font-size="12">
+    <text x="103" y="228">Inbox Analytics</text>
+    <text x="103" y="270">Reports</text>
+    <text x="103" y="312">Senders</text>
+    <text x="103" y="354">Settings</text>
+  </g>
+  <text x="298" y="100" fill="#D4AF37" font-family="Arial,sans-serif" font-size="10" letter-spacing="3">INBOX INTELLIGENCE</text>
+  <text x="298" y="151" fill="#F5F1E8" font-family="Georgia,serif" font-size="40">Good morning.</text>
+  <g fill="#111A2E" stroke="#D4AF37" stroke-opacity=".17">
+    <rect x="298" y="183" width="205" height="133" rx="17"/>
+    <rect x="520" y="183" width="205" height="133" rx="17"/>
+    <rect x="742" y="183" width="205" height="133" rx="17"/>
+    <rect x="964" y="183" width="184" height="133" rx="17"/>
+  </g>
+  <g fill="#a7a9b2" font-family="Arial,sans-serif" font-size="11">
+    <text x="318" y="214">Total Emails</text>
+    <text x="540" y="214">Unread</text>
+    <text x="762" y="214">This Week</text>
+    <text x="984" y="214">Top Sender</text>
+  </g>
+  <g fill="#F5F1E8" font-family="Georgia,serif" font-size="32">
+    <text x="318" y="266">2,481</text>
+    <text x="540" y="266">128</text>
+    <text x="762" y="266">346</text>
+    <text x="984" y="266">Studio</text>
+  </g>
+  <rect x="298" y="337" width="548" height="265" rx="18" fill="#111A2E" stroke="#fff" stroke-opacity=".08"/>
+  <rect x="864" y="337" width="284" height="265" rx="18" fill="#111A2E" stroke="#fff" stroke-opacity=".08"/>
+  <text x="321" y="372" fill="#F5F1E8" font-family="Georgia,serif" font-size="19">Email activity</text>
+  <path d="M326 545c48-55 71-30 111-65s64 10 101-26 57 23 98-18 74 7 110-53" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M326 545c48-55 71-30 111-65s64 10 101-26 57 23 98-18 74 7 110-53v137H326z" fill="#D4AF37" fill-opacity=".08"/>
+  <text x="886" y="372" fill="#F5F1E8" font-family="Georgia,serif" font-size="19">Labels</text>
+  <circle cx="1006" cy="480" r="67" fill="none" stroke="#D4AF37" stroke-width="18" stroke-dasharray="160 280" transform="rotate(-90 1006 480)"/>
+  <circle cx="1006" cy="480" r="67" fill="none" stroke="#E8CC70" stroke-width="18" stroke-dasharray="92 348" stroke-dashoffset="-165" transform="rotate(-90 1006 480)"/>
+  <circle cx="1006" cy="480" r="67" fill="none" stroke="#65708A" stroke-width="18" stroke-dasharray="52 388" stroke-dashoffset="-263" transform="rotate(-90 1006 480)"/>
+  <text x="600" y="635" fill="#D4AF37" fill-opacity=".8" font-family="Arial,sans-serif" font-size="11" letter-spacing="2">SCREENSHOT PLACEHOLDER — REPLACE BEFORE LAUNCH</text>
+</svg>
